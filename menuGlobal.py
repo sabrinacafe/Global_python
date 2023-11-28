@@ -48,6 +48,24 @@ def menu():
             else:
                 print("Opção inválida")
 
+        elif opcao_user == '2':
+            print("Você selecionou Agenda, o que deseja saber ?: ")
+            print("1. Acessar histórico de consultas")
+            print("2. Acessar consultas futuras")
+            print("3. Acessar todas as consultas")
+
+            select_agenda = input("Digite a opção desejada")
+            if select_agenda == '1':
+                print("Aqui está seu histórico de consultas...")
+            elif select_agenda == '2':
+                print("Aqui estão suas consultas futuras")
+            elif select_agenda == '3':
+                print("Aqui estão todas as suas consultas...")
+            else:
+                print("Opção inválida")
+
+
+
 
 
 
