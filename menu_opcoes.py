@@ -68,8 +68,10 @@ def opcao_categorias():
                     asma, doença pulmonar obstrutiva crônica (DPOC) e outras doenças respiratórias.
                     ''')
             elif select_categoria == '4':
-                print(
-                    'Dores nas costas podem ser causadas por diversos fatores. Agende com um de nossos especialistas para que ele possa indicar a melhor forma de tratamento.')
+                print('''
+                    Dores nas costas podem ser causadas por diversos fatores. Agende com um de nossos especialistas para
+                    que ele possa indicar a melhor forma de tratamento.
+                    ''')
             elif select_categoria == '5':
                 print('''
                     A fisioterapia pediátrica é uma especialidade que trata crianças, utilizando
@@ -145,7 +147,24 @@ def opcao_empresa():
             break
         else:
             print("Opção inválida")
-#def opcao_cadatro():
+def opcao_cadastro():
+    while True:
+        print("Você selecionou Cadastro: ")
+        print("1. Você é um paciente")
+        print("2. Você é um fisioterapeuta")
+        print("3. Voltar ao Menu Inicial")
+
+        select_cadastro = input("Selecione uma opção: ")
+
+        if select_cadastro == '1':
+            print("Para realizar o cadastro é necessário que você preencha as seguintes informações...")
+        elif select_cadastro == '2':
+            print("Para realizar o cadastro é necessário que você preencha as seguintes informações...")
+        elif select_cadastro == '3':
+            print("Voltando ao Menu inicial...")
+            break
+        else:
+            print("Opção inválida")
 
 
 def opcao_suporte():
