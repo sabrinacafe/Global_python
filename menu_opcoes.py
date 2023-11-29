@@ -123,10 +123,10 @@ def opcao_agenda():
         elif select_agenda == '3':
             print('Aqui estão todas as suas consultas...')
         elif select_agenda == '4':
-            print("Voltando ao Menu inicial...")
+            print('Voltando ao Menu inicial...')
             break
         else:
-            print("Opção inválida")
+            print('Opção inválida')
 def opcao_empresa():
     while True:
         print('Você selecionou Empresa, qual a informação gostaria de visitar?: ')
@@ -143,28 +143,28 @@ def opcao_empresa():
         elif select_empresa == '3':
             print('Av. Heráclito Graça, 406 Centro - CEP 60140-061 Fortaleza-CE')
         elif select_empresa== '4':
-            print("Voltando ao Menu inicial...")
+            print('Voltando ao Menu inicial...')
             break
         else:
-            print("Opção inválida")
+            print('Opção inválida')
 def opcao_cadastro():
     while True:
-        print("Você selecionou Cadastro: ")
-        print("1. Você é um paciente")
-        print("2. Você é um fisioterapeuta")
-        print("3. Voltar ao Menu Inicial")
+        print('Você selecionou Cadastro: ')
+        print('1. Você é um paciente')
+        print('2. Você é um fisioterapeuta')
+        print('3. Voltar ao Menu Inicial')
 
-        select_cadastro = input("Selecione uma opção: ")
+        select_cadastro = input('Selecione uma opção: ')
 
         if select_cadastro == '1':
-            print("Para realizar o cadastro é necessário que você preencha as seguintes informações...")
+            print('Para realizar o cadastro é necessário que você preencha as seguintes informações...')
         elif select_cadastro == '2':
-            print("Para realizar o cadastro é necessário que você preencha as seguintes informações...")
+            print('Para realizar o cadastro é necessário que você preencha as seguintes informações...')
         elif select_cadastro == '3':
-            print("Voltando ao Menu inicial...")
+            print('Voltando ao Menu inicial...')
             break
         else:
-            print("Opção inválida")
+            print('Opção inválida')
 
 
 def opcao_suporte():
@@ -183,7 +183,7 @@ def opcao_suporte():
         elif select_suporte == '3':
             print('Acesse nosso Chatbot localizado no cando inferior direito do site')
         elif select_suporte == '4':
-            print("Voltando ao Menu inicial...")
+            print('Voltando ao Menu inicial...')
             break
         else:
-            print("Opção inválida")
+            print('Opção inválida')
