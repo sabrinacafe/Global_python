@@ -113,7 +113,7 @@ def opcao_agenda():
         print('3. Acessar todas as consultas')
         print('4. Voltar ao Menu Inicial')
 
-        select_agenda = input('Digite a opção desejada')
+        select_agenda = input('Digite a opção desejada: ')
         if select_agenda == '1':
             print('Aqui está seu histórico de consultas...')
         elif select_agenda == '2':
@@ -125,3 +125,24 @@ def opcao_agenda():
             break
         else:
             print("Opção inválida")
+def opcao_empresa():
+    while True:
+        print('Você selecionou Empresa, qual a informação gostaria de visitar?: ')
+        print('1. Quem é a Hapvida')
+        print('2. Nossa Missão com a Fisioterapia à Domicilio')
+        print('3. Localização da Sede')
+        print('4. Voltando ao Menu Inicial...')
+
+        select_empresa = input('Digite a opção desejada: ')
+        if select_empresa == '1':
+            print('A Hapvida NotreDame Intermédica é, hoje, a maior operadora de saúde do Brasil')
+        elif select_empresa == '2':
+            print('Proporcionar saúde integrada de qualidade, acessível a geração de brasileiros.')
+        elif select_empresa == '3':
+            print('Av. Heráclito Graça, 406 Centro - CEP 60140-061 Fortaleza-CE')
+        elif select_empresa== '4':
+            print("Voltando ao Menu inicial...")
+            break
+        else:
+            print("Opção inválida")
+
