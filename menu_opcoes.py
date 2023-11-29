@@ -145,4 +145,26 @@ def opcao_empresa():
             break
         else:
             print("Opção inválida")
+#def opcao_cadatro():
 
+
+def opcao_suporte():
+    while True:
+        print('Você selecionou Suporte: ')
+        print('1. Atendimento Telefonico')
+        print('2. Atendimento por email')
+        print('3. Atendimento Online')
+        print('4. Voltando ao Menu Inicial...')
+
+        select_suporte = input('Digite a opção desejada: ')
+        if select_suporte == '1':
+            print('Ligue para o Call Center 24h 4002.3633, 4020.3633 ou 0300 313 3633')
+        elif select_suporte == '2':
+            print('Mande sua dúvida para o email: fisioterapia@hapvida.com.br')
+        elif select_suporte == '3':
+            print('Acesse nosso Chatbot localizado no cando inferior direito do site')
+        elif select_suporte == '4':
+            print("Voltando ao Menu inicial...")
+            break
+        else:
+            print("Opção inválida")
