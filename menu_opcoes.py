@@ -104,3 +104,24 @@ def opcao_categorias():
                 break
             else:
                 print('Opção inválida')
+
+def opcao_agenda():
+    while True:
+        print('Você selecionou Agenda, o que deseja saber ?: ')
+        print('1. Acessar histórico de consultas')
+        print('2. Acessar consultas futuras')
+        print('3. Acessar todas as consultas')
+        print('4. Voltar ao Menu Inicial')
+
+        select_agenda = input('Digite a opção desejada')
+        if select_agenda == '1':
+            print('Aqui está seu histórico de consultas...')
+        elif select_agenda == '2':
+            print('Aqui estão suas consultas futuras')
+        elif select_agenda == '3':
+            print('Aqui estão todas as suas consultas...')
+        elif select_agenda == '4':
+            print("Voltando ao Menu inicial...")
+            break
+        else:
+            print("Opção inválida")
