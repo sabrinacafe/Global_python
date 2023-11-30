@@ -155,6 +155,7 @@ def cadastrar_paciente():
     print('Cadastro de Paciente')
     nome = input('Nome: ')
     idade = input('Idade: ')
+    endereco = input('Endereço: ')
     cpf = input('CPF: ')
     email = input('E-mail: ')
     telefone_paciente = input('Telefone: ')
@@ -163,19 +164,20 @@ def cadastrar_paciente():
     paciente = {
         'Nome': nome,
         'Idade': idade,
+        'Endereço': endereco,
         'CPF': cpf,
         'E-mail': email,
         'Telefone': telefone_paciente,
         'Motivo da Consulta': motivo_consulta
     }
 
-    paciente.append(paciente)
+    pacientes.append(paciente)
     print('Cadastro realizado com sucesso!')
 
 def cadastrar_fisioterapeuta():
     print('Cadastro de Fisioterapeuta')
     nome = input('Nome: ')
-    idade = input('Idade: ')
+    endereco = input('Endereço: ')
     cpf_cnpj = input('CPF ou CNPJ: ')
     email = input('E-mail: ')
     telefone_fisioterapeuta = input('Telefone: ')
@@ -183,14 +185,14 @@ def cadastrar_fisioterapeuta():
 
     fisioterapeuta = {
         'Nome': nome,
-        'Idade': idade,
+        'Endereço': endereco,
         'CPF': cpf_cnpj,
         'E-mail': email,
         'Telefone': telefone_fisioterapeuta,
         'Especialidade': especialidade
     }
 
-    fisioterapeuta.append(fisioterapeuta)
+    fisioterapeutas.append(fisioterapeuta)
     print('Cadastro realizado com sucesso!')
 
 def opcao_cadastro():
