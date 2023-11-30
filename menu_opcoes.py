@@ -12,7 +12,7 @@ def opcao_user():
 
         select_user = input('Selecione uma opção: ')
 
-        if opcao_user.isdigit() and 1 <= int(opcao_user) <8:
+        if select_user.isdigit() and 1 <= int(select_user) <8:
             if select_user == '1':
                 opcao_categorias()
             elif select_user == '2':
@@ -203,9 +203,9 @@ def opcao_cadastro():
         select_cadastro = input('Selecione uma opção: ')
 
         if select_cadastro == '1':
-            print('Para realizar o cadastro é necessário que você preencha as seguintes informações...')
+            cadastrar_paciente()
         elif select_cadastro == '2':
-            print('Para realizar o cadastro é necessário que você preencha as seguintes informações...')
+            cadastrar_fisioterapeuta()
         elif select_cadastro == '3':
             print('Voltando ao Menu inicial...')
             break
