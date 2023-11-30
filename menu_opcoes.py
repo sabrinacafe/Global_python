@@ -26,6 +26,7 @@ def opcao_user():
                 opcao_suporte()
             elif select_user == '6':
                 print('Saindo do programa. Volte sempre!')
+                break
             else:
                 print('Opção inválida, digite novamente')
         else:
