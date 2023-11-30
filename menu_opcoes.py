@@ -10,20 +10,20 @@ def opcao_user():
         print('5. Suporte')
         print('6. Sair')
 
-        opcao_user = input('Selecione uma opção: ')
+        select_user = input('Selecione uma opção: ')
 
         if opcao_user.isdigit() and 1 <= int(opcao_user) <8:
-            if opcao_user == '1':
+            if select_user == '1':
                 opcao_categorias()
-            elif opcao_user == '2':
+            elif select_user == '2':
                 opcao_agenda()
-            elif opcao_user == '3':
+            elif select_user == '3':
                 opcao_empresa()
-            elif opcao_user == '4':
+            elif select_user == '4':
                 opcao_cadastro()
-            elif opcao_user == '5':
+            elif select_user == '5':
                 opcao_suporte()
-            elif opcao_user == '6':
+            elif select_user == '6':
                 acao = False
                 print('Saindo do programa. Volte sempre!')
             else:
@@ -147,6 +147,52 @@ def opcao_empresa():
             break
         else:
             print('Opção inválida')
+
+pacientes = []
+fisioterapeutas = []
+
+def cadastrar_paciente():
+    print('Cadastro de Paciente')
+    nome = input('Nome: ')
+    idade = input('Idade: ')
+    cpf = input('CPF: ')
+    email = input('E-mail: ')
+    telefone_paciente = input('Telefone: ')
+    motivo_consulta = input('Motivo da Consulta: ')
+
+    paciente = {
+        'Nome': nome,
+        'Idade': idade,
+        'CPF': cpf,
+        'E-mail': email,
+        'Telefone': telefone_paciente,
+        'Motivo da Consulta': motivo_consulta
+    }
+
+    paciente.append(paciente)
+    print('Cadastro realizado com sucesso!')
+
+def cadastrar_fisioterapeuta():
+    print('Cadastro de Fisioterapeuta')
+    nome = input('Nome: ')
+    idade = input('Idade: ')
+    cpf_cnpj = input('CPF ou CNPJ: ')
+    email = input('E-mail: ')
+    telefone_fisioterapeuta = input('Telefone: ')
+    especialidade = input('Especialidade: ')
+
+    fisioterapeuta = {
+        'Nome': nome,
+        'Idade': idade,
+        'CPF': cpf_cnpj,
+        'E-mail': email,
+        'Telefone': telefone_fisioterapeuta,
+        'Especialidade': especialidade
+    }
+
+    fisioterapeuta.append(fisioterapeuta)
+    print('Cadastro realizado com sucesso!')
+
 def opcao_cadastro():
     while True:
         print('Você selecionou Cadastro: ')
@@ -187,3 +233,5 @@ def opcao_suporte():
             break
         else:
             print('Opção inválida')
+
+opcao_user()
