@@ -67,7 +67,7 @@ def exibir_info_categoria(categoria):
         '8': 'Reabilitação vestibular é um conjunto de exercícios e técnicas utilizados para tratar distúrbios do sistema vestibular, que controla o equilíbrio e a orientação espacial. Essa terapia é empregada para aliviar tonturas, vertigens e problemas de equilíbrio, visando melhorar a função vestibular e a qualidade de vida do paciente.'
     }
 
-    print(categorias_info[categoria])
+    print(categorias_info.get(categoria, 'Opção inválida'))
 
 def opcao_agenda():
     select_agenda = input('Digite a opção desejada: ')
