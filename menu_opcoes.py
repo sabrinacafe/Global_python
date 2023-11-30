@@ -25,7 +25,6 @@ def opcao_user():
             elif select_user == '5':
                 opcao_suporte()
             elif select_user == '6':
-                acao = False
                 print('Saindo do programa. Volte sempre!')
             else:
                 print('Opção inválida, digite novamente')
@@ -70,18 +69,25 @@ def exibir_info_categoria(categoria):
     print(categorias_info.get(categoria, 'Opção inválida'))
 
 def opcao_agenda():
-    select_agenda = input('Digite a opção desejada: ')
-    if select_agenda == '1':
-        exibir_historico_consultas()
-    elif select_agenda == '2':
-        exibir_consultas_futuras()
-    elif select_agenda == '3':
-        exibir_todas_consultas()
-    elif select_agenda == '4':
-        print('Voltando ao Menu inicial...')
-        return
-    else:
-        print('Opção inválida')
+    while True:
+        print('Você selecionou Agenda, o que deseja saber ?: ')
+        print('1. Acessar histórico de consultas')
+        print('2. Acessar consultas futuras')
+        print('3. Acessar todas as consultas')
+        print('4. Voltar ao Menu Inicial')
+
+        select_agenda = input('Digite a opção desejada: ')
+        if select_agenda == '1':
+            exibir_historico_consultas()
+        elif select_agenda == '2':
+            exibir_consultas_futuras()
+        elif select_agenda == '3':
+            exibir_todas_consultas()
+        elif select_agenda == '4':
+            print('Voltando ao Menu inicial...')
+            return
+        else:
+            print('Opção inválida')
 
 def exibir_historico_consultas():
     if not pacientes:
@@ -113,7 +119,7 @@ def opcao_empresa():
         print('1. Quem é a Hapvida')
         print('2. Nossa Missão com a Fisioterapia à Domicilio')
         print('3. Localização da Sede')
-        print('4. Voltando ao Menu Inicial...')
+        print('4. Voltar ao Menu Inicial')
 
         select_empresa = input('Digite a opção desejada: ')
         if select_empresa == '1':
@@ -198,7 +204,7 @@ def opcao_suporte():
         print('1. Atendimento Telefonico')
         print('2. Atendimento por email')
         print('3. Atendimento Online')
-        print('4. Voltando ao Menu Inicial...')
+        print('4. Voltar ao Menu Inicial')
 
         select_suporte = input('Digite a opção desejada: ')
         if select_suporte == '1':
