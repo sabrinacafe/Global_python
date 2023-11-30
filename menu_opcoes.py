@@ -70,25 +70,43 @@ def exibir_info_categoria(categoria):
     print(categorias_info[categoria])
 
 def opcao_agenda():
-    while True:
-        print('Você selecionou Agenda, o que deseja saber ?: ')
-        print('1. Acessar histórico de consultas')
-        print('2. Acessar consultas futuras')
-        print('3. Acessar todas as consultas')
-        print('4. Voltar ao Menu Inicial')
+    select_agenda = input('Digite a opção desejada: ')
+    if select_agenda == '1':
+        exibir_historico_consultas()
+    elif select_agenda == '2':
+        exibir_consultas_futuras()
+    elif select_agenda == '3':
+        exibir_todas_consultas()
+    elif select_agenda == '4':
+        print('Voltando ao Menu inicial...')
+        return
+    else:
+        print('Opção inválida')
 
-        select_agenda = input('Digite a opção desejada: ')
-        if select_agenda == '1':
-            print('Aqui está seu histórico de consultas...')
-        elif select_agenda == '2':
-            print('Aqui estão suas consultas futuras')
-        elif select_agenda == '3':
-            print('Aqui estão todas as suas consultas...')
-        elif select_agenda == '4':
-            print('Voltando ao Menu inicial...')
-            break
-        else:
-            print('Opção inválida')
+def exibir_historico_consultas():
+    if not pacientes:
+        print('Nenhum paciente cadastrado.')
+        return
+
+    for paciente in pacientes:
+        print(f"Nome: {paciente['Nome']}, Histórico de Consultas: ...")
+
+def exibir_consultas_futuras():
+    if not pacientes:
+        print('Nenhum paciente cadastrado.')
+        return
+
+    for paciente in pacientes:
+        print(f"Nome: {paciente['Nome']}, Consultas Futuras: ...")
+
+def exibir_todas_consultas():
+    if not pacientes:
+        print('Nenhum paciente cadastrado.')
+        return
+
+    for paciente in pacientes:
+        print(f"Nome: {paciente['Nome']}, Todas as Consultas: ...")
+
 def opcao_empresa():
     while True:
         print('Você selecionou Empresa, qual a informação gostaria de visitar?: ')
