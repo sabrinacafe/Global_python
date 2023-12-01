@@ -1,19 +1,24 @@
+# Listas para armazenar informações de pacientes e fisioterapeutas
 pacientes = []
 fisioterapeutas = []
 
+# Função para exibir o menu principal e processar as escolhas do usuário
 def opcao_user():
     while True:
-        print('Bem vindo ao Menu Hapvida')
+         # Exibição das opções do menu principal
+        print('Bem vindo ao Menu Hapvida\n')
         print('1. Categorias')
         print('2. Agenda')
         print('3. Empresa')
         print('4. Cadastro')
         print('5. Suporte')
         print('6. Sair')
-
-        select_user = input('Selecione uma opção: ')
+        
+        # Captura da escolha do usuário
+        select_user = input('\nSelecione uma opção: ')
 
         if select_user.isdigit() and 1 <= int(select_user) <8:
+            # Processamento da escolha do usuário
             if select_user == '1':
                 opcao_categorias()
             elif select_user == '2':
@@ -25,15 +30,18 @@ def opcao_user():
             elif select_user == '5':
                 opcao_suporte()
             elif select_user == '6':
-                print('Saindo do programa. Volte sempre!')
+                print('\nSaindo do programa. Volte sempre!')
                 break
             else:
-                print('Opção inválida, digite novamente')
+                print('\nOpção inválida, digite novamente')
         else:
-            print('Opção inválida, digite novamente')
-
+            print('\nOpção inválida, digite novamente')
+            
+# Função para exibir opções relacionadas a categorias
 def opcao_categorias():
     while True:
+        # Exibição das opções de categorias
+        print('-------------------------------------------------------------------------')
         print('Você selecionou Categorias. Qual especialidade você deseja saber mais ?: ')
         print('1. Quiropraxia')
         print('2. Massoterapia')
@@ -44,8 +52,9 @@ def opcao_categorias():
         print('7. Fisioterapia Melhor Idade')
         print('8. Reabilitação Vestibular')
         print('9. Voltar ao Menu Inicial')
-
-        select_categoria = input('Selecione uma opção: ')
+        
+        # Captura da escolha do usuário
+        select_categoria = input('\nSelecione uma opção: ')
 
         if select_categoria == '9':
             print('Voltando ao Menu Inicial')
@@ -54,8 +63,9 @@ def opcao_categorias():
             exibir_info_categoria(select_categoria)
         else:
             print('Opção inválida')
-
+# Função para exibir informações sobre uma categoria específica
 def exibir_info_categoria(categoria):
+    # Dicionário com informações sobre as categorias
     categorias_info = {
         '1': 'Quiropraxia é uma abordagem de saúde que trata problemas musculoesqueléticos, especialmente na coluna vertebral, usando ajustes manuais. Busca aliviar dores e melhorar a função do sistema nervoso.',
         '2': 'Massoterapia é uma prática terapêutica que envolve a aplicação de técnicas de massagem para promover relaxamento, alívio de tensões musculares e melhorar o bem-estar físico e emocional. Ela é utilizada para reduzir o estresse, aliviar dores musculares, melhorar a circulação sanguínea e promover a saúde geral.',
@@ -66,17 +76,20 @@ def exibir_info_categoria(categoria):
         '7': 'A fisioterapia geriátrica é uma especialidade que se concentra no tratamento de idosos, visando melhorar a mobilidade, equilíbrio, força e independência funcional. Ela ajuda a prevenir e tratar condições relacionadas à idade, promovendo a qualidade de vida e a autonomia dos idosos.',
         '8': 'Reabilitação vestibular é um conjunto de exercícios e técnicas utilizados para tratar distúrbios do sistema vestibular, que controla o equilíbrio e a orientação espacial. Essa terapia é empregada para aliviar tonturas, vertigens e problemas de equilíbrio, visando melhorar a função vestibular e a qualidade de vida do paciente.'
     }
-
+    # Exibição das informações da categoria selecionada ou mensagem de opção inválida
     print(categorias_info.get(categoria, 'Opção inválida'))
-
+# Função para exibir opções relacionadas à agenda
 def opcao_agenda():
     while True:
-        print('Você selecionou Agenda, o que deseja saber ?: ')
+        # Exibição das opções de agenda
+        print('-------------------------------------------------------------------------')
+        print('\nVocê selecionou Agenda, o que deseja saber ?: ')
         print('1. Acessar histórico de consultas')
         print('2. Acessar consultas futuras')
         print('3. Acessar todas as consultas')
         print('4. Voltar ao Menu Inicial')
-
+        
+        # Captura da escolha do usuário
         select_agenda = input('Digite a opção desejada: ')
         if select_agenda == '1':
             exibir_historico_consultas()
@@ -89,12 +102,13 @@ def opcao_agenda():
             return
         else:
             print('Opção inválida')
-
+            
+# Função para exibir o histórico de consultas de pacientes
 def exibir_historico_consultas():
     if not pacientes:
         print('Nenhum paciente cadastrado.')
         return
-
+    # Exibição do histórico de consultas para cada paciente
     for paciente in pacientes:
         print(f"Nome: {paciente['Nome']}, Histórico de Consultas: ...")
 
@@ -113,16 +127,18 @@ def exibir_todas_consultas():
 
     for paciente in pacientes:
         print(f"Nome: {paciente['Nome']}, Todas as Consultas: ...")
-
+        
+# Função para exibir opções relacionadas à Empresa
 def opcao_empresa():
     while True:
+        print('-------------------------------------------------------------------------')
         print('Você selecionou Empresa, qual a informação gostaria de visitar?: ')
         print('1. Quem é a Hapvida')
         print('2. Nossa Missão com a Fisioterapia à Domicilio')
         print('3. Localização da Sede')
         print('4. Voltar ao Menu Inicial')
 
-        select_empresa = input('Digite a opção desejada: ')
+        select_empresa = input('\nDigite a opção desejada: ')
         if select_empresa == '1':
             print('A Hapvida NotreDame Intermédica é, hoje, a maior operadora de saúde do Brasil')
         elif select_empresa == '2':
@@ -134,9 +150,11 @@ def opcao_empresa():
             break
         else:
             print('Opção inválida')
-
+            
+# Função para cadastrar um paciente
 def cadastrar_paciente():
-    print('Cadastro de Paciente')
+    print('\nCadastro de Paciente')
+    # Solicita informações do paciente ao usuário
     nome = input('Nome: ')
     idade = input('Idade: ')
     endereco = input('Endereço: ')
@@ -145,6 +163,7 @@ def cadastrar_paciente():
     telefone_paciente = input('Telefone: ')
     motivo_consulta = input('Motivo da Consulta: ')
 
+    # Cria um dicionário com as informações do paciente
     paciente = {
         'Nome': nome,
         'Idade': idade,
@@ -154,12 +173,16 @@ def cadastrar_paciente():
         'Telefone': telefone_paciente,
         'Motivo da Consulta': motivo_consulta
     }
-
+    
+    # Adiciona o paciente à lista de pacientes
     pacientes.append(paciente)
-    print('Cadastro realizado com sucesso!')
+    # Informa ao usuário que o cadastro foi realizado com sucesso
+    print('\nCadastro realizado com sucesso!')
 
+# Função para cadastrar um fisioterapeuta
 def cadastrar_fisioterapeuta():
-    print('Cadastro de Fisioterapeuta')
+    print('\nCadastro de Fisioterapeuta')
+    # Solicita informações do fisioterapeuta ao usuário
     nome = input('Nome: ')
     endereco = input('Endereço: ')
     cpf_cnpj = input('CPF ou CNPJ: ')
@@ -167,6 +190,7 @@ def cadastrar_fisioterapeuta():
     telefone_fisioterapeuta = input('Telefone: ')
     especialidade = input('Especialidade: ')
 
+    # Cria um dicionário com as informações do fisioterapeuta
     fisioterapeuta = {
         'Nome': nome,
         'Endereço': endereco,
@@ -175,19 +199,24 @@ def cadastrar_fisioterapeuta():
         'Telefone': telefone_fisioterapeuta,
         'Especialidade': especialidade
     }
-
+    # Adiciona o fisioterapeuta à lista de fisioterapeutas
     fisioterapeutas.append(fisioterapeuta)
-    print('Cadastro realizado com sucesso!')
-
+    # Informa ao usuário que o cadastro foi realizado com sucesso
+    print('\nCadastro realizado com sucesso!')
+    
+# Função para oferecer opções de cadastro (paciente ou fisioterapeuta)
 def opcao_cadastro():
     while True:
+        print('-------------------------------------------------------------------------')
         print('Você selecionou Cadastro: ')
         print('1. Você é um paciente')
         print('2. Você é um fisioterapeuta')
         print('3. Voltar ao Menu Inicial')
 
+        # Captura a escolha do usuário
         select_cadastro = input('Selecione uma opção: ')
-
+        
+        # Processa a escolha do usuário
         if select_cadastro == '1':
             cadastrar_paciente()
         elif select_cadastro == '2':
@@ -198,9 +227,10 @@ def opcao_cadastro():
         else:
             print('Opção inválida')
 
-
+# Função para exibir opções relacionadas à Suporte
 def opcao_suporte():
     while True:
+        print('-------------------------------------------------------------------------')
         print('Você selecionou Suporte: ')
         print('1. Atendimento Telefonico')
         print('2. Atendimento por email')
@@ -220,4 +250,5 @@ def opcao_suporte():
         else:
             print('Opção inválida')
 
+# Função principal que inicia o programa
 opcao_user()
