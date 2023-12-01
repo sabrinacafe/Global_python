@@ -15,12 +15,13 @@ Precisão: A busca pela precisão concentra-se na personalização dos cuidados 
 
 Proposta da solução:
 
-Desenvolvemos uma proposta para uma plataforma de fisioterapia domiciliar, na qual tanto os fisioterapeutas quanto os clientes podem se cadastrar. Quando um paciente necessitar de fisioterapia, ele acessa o site, busca pela especialidade desejada e a plataforma exibirá os profissionais cadastrados.
-
 Nosso projeto busca por trazer praticidade e flexibilidade para os clientes. Imagine a capacidade de agendar e receber tratamentos de fisioterapia com apenas alguns cliques, tudo isso no conforto da própria residência. É nesse ponto que Hapvida Fisioterapia à Domicílio se destaca.
 
-Assim, utilizando Python, desenvolvemos um menu que concentra as informações cruciais, incluindo:
+Em nosso escopo, abraçamos diversas categorias de tratamentos que não só atendem às necessidades dos clientes, mas também consideram a realidade dos fisioterapeutas. Compreendemos os desafios de locomoção e organização desses profissionais e, por isso, desenvolvemos um sistema que não apenas beneficia os clientes, mas também permite aos fisioterapeutas entregar seus serviços com excelência.
 
+Desenvolvemos uma proposta para uma plataforma de fisioterapia domiciliar, na qual tanto os fisioterapeutas quanto os clientes podem se cadastrar. Quando um paciente necessitar de fisioterapia, ele acessa o site, busca pela especialidade desejada e a plataforma exibirá os profissionais cadastrados.
+
+Assim, utilizando Python, desenvolvemos um menu que concentra as informações cruciais, incluindo:
 - Especialidades oferecidas
 
 - Agenda do cliente, abrangendo todos os atendimentos passados e futuros
