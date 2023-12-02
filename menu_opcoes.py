@@ -49,7 +49,7 @@ def opcao_categorias():
         print('4. Dores na coluna')
         print('5. Fisioterapia Pediátrica')
         print('6. Ventosa')
-        print('7. Fisioterapia Melhor Idade')
+        print('7. Fisioterapia Geriátrica')
         print('8. Reabilitação Vestibular')
         print('9. Voltar ao Menu Inicial')
         
@@ -67,7 +67,8 @@ def opcao_categorias():
 def exibir_info_categoria(categoria):
     # Dicionário com informações sobre as categorias
     categorias_info = {
-        '1': 'Quiropraxia é uma abordagem de saúde que trata problemas musculoesqueléticos, especialmente na coluna vertebral, usando ajustes manuais. Busca aliviar dores e melhorar a função do sistema nervoso.',
+        '1': 'A quiropraxia é uma prática de saúde alternativa que se concentra no diagnóstico e tratamento de distúrbios do sistema musculoesquelético, especialmente na coluna vertebral. Os profissionais de quiropraxia, conhecidos como quiropráticos, acreditam que muitos problemas de saúde podem ser atribuídos a desalinhamentos na coluna vertebral e em outras articulações.
+            Os quiropráticos realizam ajustes na coluna vertebral e em outras articulações com as mãos ou instrumentos especializados. Esses ajustes, também conhecidos como manipulações, têm como objetivo melhorar a função do sistema nervoso, aliviar a dor e promover a saúde em geral.',
         '2': 'Massoterapia é uma prática terapêutica que envolve a aplicação de técnicas de massagem para promover relaxamento, alívio de tensões musculares e melhorar o bem-estar físico e emocional. Ela é utilizada para reduzir o estresse, aliviar dores musculares, melhorar a circulação sanguínea e promover a saúde geral.',
         '3': 'Fisioterapia respiratória é uma especialidade da fisioterapia que visa tratar e prevenir distúrbios respiratórios. Utiliza técnicas e exercícios para melhorar a função pulmonar, facilitar a respiração e ajudar pacientes com condições como asma, doença pulmonar obstrutiva crônica (DPOC) e outras doenças respiratórias.',
         '4': 'Dores nas costas podem ser causadas por diversos fatores. Agende com um de nossos especialistas para que ele possa indicar a melhor forma de tratamento.',
@@ -84,9 +85,9 @@ def opcao_agenda():
         # Exibição das opções de agenda
         print('-------------------------------------------------------------------------')
         print('\nVocê selecionou Agenda, o que deseja saber ?: ')
-        print('1. Acessar histórico de consultas')
-        print('2. Acessar consultas futuras')
-        print('3. Acessar todas as consultas')
+        print('1. Histórico de consultas')
+        print('2. Consultas futuras')
+        print('3. Todas as consultas')
         print('4. Voltar ao Menu Inicial')
         
         # Captura da escolha do usuário
@@ -106,7 +107,7 @@ def opcao_agenda():
 # Função para exibir o histórico de consultas de pacientes
 def exibir_historico_consultas():
     if not pacientes:
-        print('Nenhum paciente cadastrado.')
+        print('Nenhum paciente foi cadastrado.')
         return
     # Exibição do histórico de consultas para cada paciente
     for paciente in pacientes:
@@ -114,7 +115,7 @@ def exibir_historico_consultas():
 
 def exibir_consultas_futuras():
     if not pacientes:
-        print('Nenhum paciente cadastrado.')
+        print('Nenhum paciente foi cadastrado.')
         return
 
     for paciente in pacientes:
