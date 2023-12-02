@@ -17,7 +17,7 @@ def opcao_user():
         # Captura da escolha do usuário
         select_user = input('\nSelecione uma opção: ')
 
-        if select_user.isdigit() and 1 <= int(select_user) <8:
+        if select_user.isdigit() and 1 <= int(select_user) <7:
             # Processamento da escolha do usuário
             if select_user == '1':
                 opcao_categorias()
