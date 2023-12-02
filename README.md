@@ -89,3 +89,6 @@ Equipe de desenvolvimento:
 - RM552692 Luis Henrique Oliveira da Silva
 - RM553148 Renan Lucio de Souza
 - RM553568 Sabrina da Motta Café
+
+Link do vídeo sobre a ideia do código:
+https://youtu.be/Nd-8fVq9GVE
